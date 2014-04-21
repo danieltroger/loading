@@ -2,15 +2,15 @@
 $wtd = array("generating","creating","hacking","chmodding","deleting");
 for($i = 0;$i <= 100;$i++)
 {
-echo $wtd[rand(0,(sizeof($wtd)-1))] . " " . fillout(rs(rand(1,20)) . "." . rs(3) . "....",100) . "\n";
-for($is = 0; $is <= $i;$is++)
+echo fillout($wtd[rand(0,(sizeof($wtd)-1))] . " " . rs(rand(1,20)) . "." . rs(3) . "....",100+5) . "\n";
+for($is = 1; $is <= $i;$is++)
 {
 echo "=";
 }
 echo ">";
-for($t=$i;$t <100;$t++)
+for($t=$i+1;$t <=100;$t++)
 {
-echo " ";
+echo "–";
 }
 echo "{$i}%\r";
 usleep(rand(10000,500000));
@@ -34,9 +34,9 @@ return $string;
 else
 {
 $res = $string;
-for($a = $leng; $a < $totleng; $a++)
+for($a = $leng+1; $a < $totleng; $a++)
 {
-$res .= " ";
+$res .= "–";
 }
 return $res;
 }
