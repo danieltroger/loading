@@ -10,7 +10,7 @@ echo "=";
 echo ">";
 for($t=$i+1;$t <=100;$t++)
 {
-echo "–";
+echo " ";
 }
 echo "{$i}%\r";
 usleep(rand(10000,500000));
@@ -36,7 +36,7 @@ else
 $res = $string;
 for($a = $leng+1; $a < $totleng; $a++)
 {
-$res .= "–";
+$res .= " ";
 }
 return $res;
 }
